@@ -1,0 +1,90 @@
+{{> header }}
+
+    <!-- jumbotron -->     
+<div class="container">
+
+    <div class="jumbotron text-center">
+        <h1></span> Welcome to Divvy</h1>
+        
+    </div>
+
+
+
+
+
+<!--bootstrap code starts here-->
+<center>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="col-md-8 bootstrap snippets">
+<div class="row">
+    <form method="POST" action="/keyword1" class='col-md-2'>  
+      <button type="submit" class="btn btn-primary">{{data.userKeywords.keyword_1}}</button>
+    </form>
+    <form method="POST" action="/keyword2" class='col-md-2'>
+      <button type="submit" class="btn btn-primary">{{data.userKeywords.keyword_2}}</button>
+    </form>
+    <form method="POST" action="/keyword3" class='col-md-2'>
+      <button type="submit" class="btn btn-primary">{{data.userKeywords.keyword_3}}</button>
+    </form>
+    <form method="POST" action="/keyword4" class='col-md-2'>
+      <button type="submit" class="btn btn-primary">{{data.userKeywords.keyword_4}}</button>
+    </form>
+    <form method="POST" action="/keyword5" class='col-md-2'>
+      <button type="submit" class="btn btn-primary">{{data.userKeywords.keyword_5}}</button>
+    </form>
+
+  </div>
+{{!-- <div class="panel">
+    <div class="panel-body">
+        <textarea class="form-control" rows="2" placeholder="What are you thinking?"></textarea>
+        <div class="mar-top clearfix">
+            <button class="btn btn-sm btn-primary pull-right" type="submit"><i class="fa fa-pencil fa-fw"></i> Share</button>
+            <a class="btn btn-trans btn-icon fa fa-video-camera add-tooltip" href="#"></a>
+            <a class="btn btn-trans btn-icon fa fa-camera add-tooltip" href="#"></a>
+            <a class="btn btn-trans btn-icon fa fa-file add-tooltip" href="#"></a>
+        </div>
+    </div>
+</div> --}}
+<div class="panel">
+    <div class="panel-body">
+      <!-- Newsfeed Content -->
+      <!--===================================================-->
+      {{#each data.newsResults.articles}}
+      <div class="media-block">
+        <a class="media-left" href={{url}}>
+          <h2>{{title}}</h2>
+          <img class="img-circle img-sm" alt="Article Thumbnail" src={{urlToImage}} style="width:400px;height:400px;">
+        </a>
+        <div class="media-body">
+          <div class="mar-btm">
+            <a href="#" class="btn-link text-semibold media-heading box-inline">{{source.name}}</a>
+            <p class="text-muted text-sm">
+              <i class="fa fa-lg"></i>{{publishedAt}}</p>
+          </div>
+          <p>{{description}}</p>
+          <div class="pad-ver">
+            <div class="btn-group">
+              <a class="btn btn-sm btn-default btn-hover-success" href="#">
+                <i class="fa fa-thumbs-up"></i>
+              </a>
+              <a class="btn btn-sm btn-default btn-hover-danger" href="#">
+                <i class="fa fa-thumbs-down"></i>
+              </a>
+            </div>
+            <a class="btn btn-sm btn-default btn-hover-primary" href="#">Comment</a>
+          </div>
+          <hr>
+    
+        </div>
+      </div>
+      {{/each}}
+      <!--===================================================-->
+      <!-- End Newsfeed Content -->
+    </div>
+</div>
+</div>
+</center>
+
+</div>
+</body>
+</html> 
