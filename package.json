@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/alexspatrick/REFER-U/issues"
   },
-  "homepage": "https://github.com/alexspatrick/REFER-U#readme"
+  "homepage": "https://github.com/alexspatrick/REFER-U#readme",
+  "dependencies": {
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^5.0.14"
+  }
 }
